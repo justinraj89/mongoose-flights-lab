@@ -9,7 +9,7 @@ module.exports = {
 function index(req, res){
 	// List out the movies
 	Flight.find({}, function(err, allFlightsInDb){
-		console.log(allFlightsInDb, " <- all the flights");
+		// console.log(allFlightsInDb, " <- all the flights");
 		if(err){
 			res.send('You have an error trying to find the flights, check the terminal')
 		}
@@ -24,7 +24,8 @@ function index(req, res){
 }
 
 function newFlight(req, res) {
-    res.render('flights/new')
+    res.render('flights/new');
+	
 }
 
 function create(req, res){
