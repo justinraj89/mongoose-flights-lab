@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/styleshow.css' />
+    <title>Document</title>
+</head>
+<body>
+    <ul class="menu">
+        <li><a class="buttons" href="/flights/new">New Flight</a></li>
+        <li><a class="buttons" href="/flights">All Flights</a></li>
+      </ul>
+      <h1>Flight Information</h1>
+    <section>
+        <div>Airline</div>
+        <div><%= flight.airline %></div>
+        <div>Airport</div>
+        <div><%= flight.airport %></div>
+        <div>Flight Number </div>
+        <div><%= flight.flightNo %></div>
+        <div>Depart Info</div>
+        <div><%= flight.departs %></div>
+        <br>
+        <br>
+
+        <h2>Flight Arrival Information</h2>
+        <br>
+        <label>Airport:
+            <select name="airport">
+                <option value="AUS">AUS</option>
+                <option value="DFW">DFW</option>
+                <option value="DEN">DEN</option>
+                <option value="LAX">LAX</option>
+                <option value="SAN">SAN</option>
+            </select>
+          </label><br>
+          <label>Arrival:
+            <input type="datetime-local" name="arrival" value="yyyy-MM-ddThh:mm"
+               min="2022-08-04T00:00" max="2023-03-04T00:00">
+          </label><br>
+    </section>
+</body>
+
+
+</html>
