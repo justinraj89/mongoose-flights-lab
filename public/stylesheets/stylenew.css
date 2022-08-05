@@ -1,0 +1,26 @@
+body {
+    text-align: center;
+    color:antiquewhite;
+    background-color: rgb(6, 6, 42);
+    margin-top: 50px;
+  }
+
+  .menu {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  
+  .buttons {
+    text-decoration: none;
+    color: whitesmoke;
+  }
+
+  h2 {
+    margin-top: 50px;
+  }
+

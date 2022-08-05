@@ -1,0 +1,26 @@
+body {
+  background-color: rgb(6, 6, 42);
+  margin-top: 50px;
+}
+
+h1 {
+  color:antiquewhite;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+li {
+  list-style: none;
+}
+
+
+.buttons {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
