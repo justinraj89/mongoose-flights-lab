@@ -14,6 +14,8 @@ const destinationSchema = new Schema ({
 })
 
 
+let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
+'August', 'September', 'October', 'November', 'December'];
 
 
 const flightSchema = new Schema({

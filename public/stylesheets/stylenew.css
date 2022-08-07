@@ -1,9 +1,22 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+}
+
 body {
     text-align: center;
-    color:antiquewhite;
     background-color: rgb(6, 6, 42);
     margin-top: 50px;
   }
+
+  label {
+    color:whitesmoke;
+  }
+
+.select {
+  font-size: 15px;
+}
+  
 
   .menu {
     display: flex;
@@ -21,6 +34,9 @@ body {
   }
 
   h2 {
-    margin-top: 50px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    color:aliceblue;
+    font-size: 33px;
   }
 

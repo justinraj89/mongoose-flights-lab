@@ -17,7 +17,7 @@
     <h2>New Flight</h2>
 <form action="/flights" method="POST">
   <label>Airline:
-    <select name="airline">
+    <select class="select" name="airline">
         <option value="American">American</option>
         <option value="Delta">Delta</option>
         <option value="Southwest">Southwest</option>
@@ -26,7 +26,7 @@
   </label><br>
   <br>
   <label>Airport:
-    <select name="airport">
+    <select class="select" name="airport">
         <option value="ATL">ATL</option>
         <option value="DFW">DFW</option>
         <option value="DEN" selected>DEN</option>
@@ -36,11 +36,11 @@
   </label><br>
   <br>
   <label>Flight Number:
-    <input type="text" name="flightNo">
+    <input class="select" type="text" name="flightNo">
   </label><br>
   <br>
   <label>Departs:
-    <input type="datetime-local" name="departs" value="yyyy-MM-ddThh:mm"
+    <input class="select" type="datetime-local" name="departs" value="yyyy-MM-ddThh:mm"
        min="2022-08-04T00:00" max="2023-03-04T00:00">
   </label><br>
   <br>
