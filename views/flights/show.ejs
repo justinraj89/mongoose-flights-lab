@@ -27,20 +27,45 @@
 
         <h2>Flight Arrival Information</h2>
         <br>
-        <label>Airport:
-            <select name="airport">
-                <option value="AUS">AUS</option>
-                <option value="DFW">DFW</option>
-                <option value="DEN">DEN</option>
-                <option value="LAX">LAX</option>
-                <option value="SAN">SAN</option>
-            </select>
-          </label><br>
-          <label>Arrival:
-            <input type="datetime-local" name="arrival" value="yyyy-MM-ddThh:mm"
-               min="2022-08-04T00:00" max="2023-03-04T00:00">
-          </label><br>
-    </section>
+
+        <form id="add-destination-form" method="POST"
+        action="/flights/<%= flight._id %>/destinations">
+        <label>Airport:</label>
+        <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="DFW">DFW</option>
+            <option value="DEN">DEN</option>
+            <option value="LAX">LAX</option>
+            <option value="SAN">SAN</option>
+        </select>
+        <label>Arrival:</label>
+        <input type="datetime-local" name="arrival" value="yyyy-MM-ddThh:mm"
+        min="2022-08-04T00:00" max="2023-03-04T00:00">
+        <input type="submit" value="Add Destination">
+      </form>
+      <br>
+
+      <% if (flight.destinations.length) { %>
+        <table>
+          <thead>
+            <tr>
+              <th>Airport</th>
+              <th>Arrival</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% flight.destinations.forEach(function(f) { %>
+              <tr>
+                <td><%= f.airport %></td>
+                <td><%= f.arrival %></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      <% } else { %>
+        <h5>No Arrival information available</h5>
+      <% } %>
+        
 </body>
 
 

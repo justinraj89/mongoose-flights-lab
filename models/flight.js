@@ -9,7 +9,8 @@ const destinationSchema = new Schema ({
         enum: ['AUS', 'DFW', 'DEN', 'LAX', 'SAN']
     },
     arrival: Date,
-    
+},{
+    timestapms: true
 })
 
 

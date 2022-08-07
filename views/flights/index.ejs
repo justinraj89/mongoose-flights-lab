@@ -8,10 +8,12 @@
   <title>Mongoose flights</title>
 </head>
 <body>
-  <ul class="menu">
-    <li><a class="buttons" href="/flights/new">New Flight</a></li>
-    <li><a class="buttons" href="/flights">All Flights</a></li>
+  <header>
+    <ul class="menu">
+      <li><a class="buttons" href="/flights/new">New Flight</a></li>
+      <li><a class="buttons" href="/flights">All Flights</a></li>
   </ul>
+</header>
   <h1>Flight List</h1>
   <div class="container">
   <table>
@@ -25,9 +27,9 @@
     </thead>
     <tbody>
       <!-- Write the line of EJS to iterate over movies using forEach -->
-	  <% flights.forEach(flight => { %>
-	   
-	 
+    <% flights.forEach(flight => { %>
+     
+   
         <tr>
           <td><%= flight.airline %></td>
           <td><%= flight.airport %></td>
@@ -35,7 +37,7 @@
           <td><%= flight.departs %></td>
           <td><a href="/flights/<%= flight._id %>">Flight Details</a> </td>
         </tr>
-		<% }) %>
+    <% }) %>
     </tbody>
   </table>
 </div>
