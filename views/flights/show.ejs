@@ -59,32 +59,8 @@
           <h5>No Arrival information available</h5>
         <% } %>
       </div>
-      <br>
-      <br>
-      
-      <h3>Add New Arrival Information</h3>
-
-        <form id="add-destination-form" method="POST"
-        action="/flights/<%= flight._id %>/destinations">
-        <label>Airport:</label>
-        <select name="airport">
-            <option value="AUS">AUS</option>
-            <option value="DFW">DFW</option>
-            <option value="DEN">DEN</option>
-            <option value="LAX">LAX</option>
-            <option value="SAN">SAN</option>
-        </select>
-        <label>Arrival:</label>
-        <input type="datetime-local" name="arrival" value="yyyy-MM-ddThh:mm"
-        min="2022-08-04T00:00" max="2023-03-04T00:00">
-        <input type="submit" value="Add Destination">
-      </form>
-      <br>
-      <h2>Buy A Ticket</h2>
-      <a href="/flights/<%= flight._id %>/tickets/new">Click Here</a>
 
       <br>
-
       <h3>Current Tickets</h3>
       <div class="ticket-container">
         <% if (ticket.length) { %>
@@ -108,11 +84,33 @@
           <h5>No Ticket information available</h5>
         <% } %>
       </div>
-       
-
       
+      <h3>Add New Arrival Information</h3>
 
-  
+        <form id="add-destination-form" method="POST"
+        action="/flights/<%= flight._id %>/destinations">
+        <label>Airport:</label>
+        <select name="airport">
+            <option value="AUS">AUS</option>
+            <option value="DFW">DFW</option>
+            <option value="DEN">DEN</option>
+            <option value="LAX">LAX</option>
+            <option value="SAN">SAN</option>
+        </select>
+        <label>Arrival:</label>
+        <input type="datetime-local" name="arrival" value="yyyy-MM-ddThh:mm"
+        <!-- min="2022-08-04T00:00" max="2023-03-04T00:00"> -->
+        <input type="submit" value="Add Destination">
+      </form>
+      <br>
+      <h2>Buy A Ticket</h2>
+      <form action="/flights/<%= flight._id %>/tickets/new">
+        <button type="submit">Buy Ticket</button>
+     </form>
+
+      <br>
+
+     
         
 </body>
 

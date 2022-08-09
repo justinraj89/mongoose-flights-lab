@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    font-family: Helvetica;
+  }
+  
+  body {
+      text-align: center;
+      background-color: rgb(6, 6, 42);
+      margin-top: 50px;
+    }
+  
+    label {
+      color:whitesmoke;
+    }
+  
+  .select {
+    font-size: 15px;
+  }
+    
+  
+    .menu {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    
+    li {
+      list-style: none;
+    }
+    
+    
+    .buttons {
+      text-decoration: none;
+      color: whitesmoke;
+    }
+  
+    h2 {
+      margin-top: 100px;
+      margin-bottom: 50px;
+      color:aliceblue;
+      font-size: 33px;
+    }

@@ -1,5 +1,7 @@
 const Ticket = require('../models/ticket');
 const Flight = require('../models/flight');
+const ticket = require('../models/ticket');
+const { rawListeners } = require('../models/ticket');
 
 module.exports = {
     new: newTicket,
@@ -8,14 +10,11 @@ module.exports = {
 
 
 function create(req, res) {
-    flightId = req.params.id;
-    // console.log(flightId, '<--req.params');
-    console.log(req.body, '<-- req.body contents of form')
-    req.body.flight = flightId; // adding flight property to the body
-    Ticket.create(req.body, function (err, ticket) {
-        console.log(ticket);
-        res.redirect(`/flights/${flightId}`);
-    });
+    req.body.flight = req.params.id;
+    console.log(req.body)
+    Ticket.create(req.body, function(err, ticket){
+        res.redirect(`/flights/${req.body.flight}`)
+    })
 }
 
 
