@@ -18,6 +18,7 @@ let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July',
 'August', 'September', 'October', 'November', 'December'];
 
 
+
 const flightSchema = new Schema({
     airline: {
         type: String,
@@ -35,6 +36,7 @@ const flightSchema = new Schema({
         max: 9999
     },
     departs: Date,
+
     destinations: [destinationSchema]
 });
 
