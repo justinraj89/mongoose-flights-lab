@@ -10,7 +10,7 @@
     <h2>Buy Ticket</h2>
     <form id="new-ticket-form" action="/tickets/<%= ticketId %> " method="POST">
         <label>Pick Your Seat:</label>
-        <input type="text" name="seat">
+        <input name="seat" required pattern="[A-F][1-9]\d?">
         <label>Price:</label>
         <input type="text" name="price">
         <input type="submit" value="Buy Ticket">

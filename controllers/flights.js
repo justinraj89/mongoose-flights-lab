@@ -41,7 +41,6 @@ function show(req, res) {
 
 
 function newFlight(req, res) {
-	
 	let d = new Date();
 	defaultDate = d.setFullYear(d.getFullYear() + 1);	
 	defaultDate = formatDate(defaultDate,"long")

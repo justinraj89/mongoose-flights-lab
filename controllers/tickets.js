@@ -11,12 +11,9 @@ function create(req, res) {
     flightId = req.params.id;
     // console.log(flightId, '<--req.params');
     console.log(req.body, '<-- req.body contents of form')
-    req.body.flight = flightId;
-    let seat = req.body.seat;
-    let price = req.body.price;
-    let flight = req.params.id;
-    let ticket = new Ticket({ seat, price, flight });
+    req.body.flight = flightId; // adding flight property to the body
     Ticket.create(req.body, function (err, ticket) {
+        console.log(ticket);
         res.redirect(`/flights/${flightId}`);
     });
 }
