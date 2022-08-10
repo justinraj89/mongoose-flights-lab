@@ -10,14 +10,10 @@
 
 
 <body>
-
-  
   <ul class="menu">
       <li><a class="buttons" href="/flights/new">Add Flight</a></li>
       <li><a class="buttons" href="/flights">All Flights</a></li>
   </ul>
-
-
   <h1>Flight List</h1>
   <div class="container">
   <table class ='flight-info'>
@@ -31,7 +27,6 @@
       </tr>
     </thead>
     <tbody>
-      <!-- Write the line of EJS to iterate over movies using forEach -->
     <% flights.forEach(flight => { %>
         <tr>
           <td><%= flight.airline %></td>
@@ -44,6 +39,5 @@
     </tbody>
   </table>
 </div>
-  
 </body>
 </html>

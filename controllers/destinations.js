@@ -9,7 +9,7 @@ function create(req,res){
     // console.log(req.params.id, '<--Params.id');
     // console.log(req.body, '<- arrival info')
         Flight.findById(req.params.id, function(err, flight){
-            console.log(flight.destinations, '<-flight.destinations');
+            // console.log(flight.destinations, '<-flight.destinations');
 			data.arrivalDate = formatDate(data.arrival)
             flight.destinations.push(data);
             flight.save(function(err){
