@@ -50,7 +50,7 @@
               <% flight.destinations.forEach(function(f) { %>
                 <tr>
                   <td><%= f.airport %></td>
-                  <td><%= f.arrival %></td>
+                  <td><%= f.arrivalDate %></td>
                 </tr>
               <% }); %>
             </tbody>
@@ -75,7 +75,7 @@
               <% ticket.forEach(function(ticket) { %>
                 <tr>
                   <td><%= ticket.seat %></td>
-                  <td><%= ticket.price %></td>
+                  <td>$<%= ticket.price %></td>
                 </tr>
               <% }); %>
             </tbody>
@@ -98,8 +98,7 @@
             <option value="SAN">SAN</option>
         </select>
         <label>Arrival:</label>
-        <input type="datetime-local" name="arrival" value="yyyy-MM-ddThh:mm"
-        <!-- min="2022-08-04T00:00" max="2023-03-04T00:00"> -->
+        <input type="datetime-local" name="arrival" value="yyyy-MM-ddThh:mm">
         <input type="submit" value="Add Destination">
       </form>
       <br>

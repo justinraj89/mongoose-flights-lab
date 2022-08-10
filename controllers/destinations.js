@@ -5,12 +5,13 @@ module.exports = {
 };
 
 function create(req,res){
+	let data = req.body;
     // console.log(req.params.id, '<--Params.id');
     // console.log(req.body, '<- arrival info')
         Flight.findById(req.params.id, function(err, flight){
             console.log(flight.destinations, '<-flight.destinations');
-            console.log(req.body.arrival, '<-req.body.arrival here');
-            flight.destinations.push(req.body);
+			data.arrivalDate = formatDate(data.arrival)
+            flight.destinations.push(data);
             flight.save(function(err){
                 res.redirect(`/flights/${flight._id}`);
             });
@@ -19,7 +20,10 @@ function create(req,res){
 
 
 const formatDate = (d,dateType = "short") => {
-    d = new Date(d)
+    if(typeof(d) !== 'object'){
+		d = new Date(d)
+	}
+		console.log(d, '<-- This is d')
 	if (dateType === "short") {
 		let ye = new Intl.DateTimeFormat('en', { year: 'numeric' }).format(d);
 		let mo = new Intl.DateTimeFormat('en', { month: 'numeric' }).format(d);

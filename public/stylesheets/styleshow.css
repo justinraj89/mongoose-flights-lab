@@ -73,6 +73,7 @@ body {
   .buttons {
     text-decoration: none;
     color: whitesmoke;
+    font-size: 20px;
   }
 
   .ticket-container {

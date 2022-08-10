@@ -28,11 +28,14 @@ function index(req, res){
 
 function show(req, res) {
     Flight.findById(req.params.id, function(err, flight) {
-		console.log(flight, " <- show page")
+		// console.log(flight, " <- show page")
     //  console.log(flight.departs)
       	flight.departsDate = formatDate(flight.departs)
 	  	Ticket.find({flight: flight._id}, function(err, ticket){
 		// console.log(ticket, '<-ticket')	
+		flight.destinations.forEach(function (date) {
+			date.arrivalDate = formatDate(date.arrival)
+		})
 		res.render('flights/show', {flight: flight, ticket: ticket});
 		
 	  })
@@ -46,7 +49,6 @@ function newFlight(req, res) {
 	defaultDate = formatDate(defaultDate,"long")
 	// console.log(defaultDate)
     res.render('flights/new', {defaultDate: defaultDate});
-	
 }
 
 function create(req, res){

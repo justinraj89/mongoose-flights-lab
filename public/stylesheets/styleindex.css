@@ -50,7 +50,7 @@ h1 {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 .menu {
@@ -66,6 +66,7 @@ h1 {
   .buttons {
     text-decoration: none;
     color: whitesmoke;
+    font-size: 20px;
   }
 
-  
+

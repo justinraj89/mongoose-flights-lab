@@ -12,7 +12,8 @@ module.exports = {
 function create(req, res) {
     req.body.flight = req.params.id;
     console.log(req.body)
-    Ticket.create(req.body, function(err, ticket){
+    const newTicket = new Ticket(req.body)
+    newTicket.save(function(err, ticket){
         res.redirect(`/flights/${req.body.flight}`)
     })
 }
@@ -26,3 +27,5 @@ function newTicket(req, res){
     res.render('tickets/new', {ticketId: req.params.id});
 }
 
+
+  
